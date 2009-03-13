@@ -1,0 +1,9 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2581
+
+This is a script that uses a grep-like regex to find a function declaration in the current file/buffer that matches a given regular expression.
+
+If called like: Fdgrep(-1) the function will ask the user for a pattern to search for.  It will then search the current file buffer for function declarations that contain the given pattern.  If no pattern is given, it will prompt the user again.  If no pattern is given the second time, it will do a search that should match any function declaration.
+
+If called like: Fdgrep(0) the function will ask search for the last-used pattern (like hitting n after a normal search). If there is no last-used pattern in memory it will prompt the user for a pattern, which can be ignored as stated above to match any function declaration.
+
+This will work with most C, C++, Objective-C, and Python function declarations that I have seen in my own code or at my job (we have a _very_ large C codebase).
